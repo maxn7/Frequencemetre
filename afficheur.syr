@@ -1,0 +1,532 @@
+Release 12.2 - xst M.63c (nt)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: afficheur.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "afficheur.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "afficheur"
+Output Format                      : NGC
+Target Device                      : xc3s500e-5-fg320
+
+---- Source Options
+Top Module Name                    : afficheur
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/2EN/FM-PROJnum/frequencemetre/decodeur.vhd" in Library work.
+Architecture behavioral of Entity decodeur is up to date.
+Compiling vhdl file "D:/2EN/FM-PROJnum/frequencemetre/trouver_calibre.vhd" in Library work.
+Architecture behavioral of Entity trouver_calibre is up to date.
+Compiling vhdl file "D:/2EN/FM-PROJnum/frequencemetre/trouver_digit.vhd" in Library work.
+Entity <trouver_digit> compiled.
+Entity <trouver_digit> (Architecture <behavioral>) compiled.
+Compiling vhdl file "D:/2EN/FM-PROJnum/frequencemetre/afficheur.vhf" in Library work.
+Architecture behavioral of Entity afficheur is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <afficheur> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <decodeur> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <trouver_calibre> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <trouver_digit> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <afficheur> in library <work> (Architecture <behavioral>).
+Entity <afficheur> analyzed. Unit <afficheur> generated.
+
+Analyzing Entity <decodeur> in library <work> (Architecture <behavioral>).
+Entity <decodeur> analyzed. Unit <decodeur> generated.
+
+Analyzing Entity <trouver_calibre> in library <work> (Architecture <behavioral>).
+Entity <trouver_calibre> analyzed. Unit <trouver_calibre> generated.
+
+Analyzing Entity <trouver_digit> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "D:/2EN/FM-PROJnum/frequencemetre/trouver_digit.vhd" line 61: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <Sfrequence>, <comp>, <step>
+WARNING:Xst:819 - "D:/2EN/FM-PROJnum/frequencemetre/trouver_digit.vhd" line 153: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <step>
+Entity <trouver_digit> analyzed. Unit <trouver_digit> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <decodeur>.
+    Related source file is "D:/2EN/FM-PROJnum/frequencemetre/decodeur.vhd".
+    Found 16x7-bit ROM for signal <sortie>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <decodeur> synthesized.
+
+
+Synthesizing Unit <trouver_calibre>.
+    Related source file is "D:/2EN/FM-PROJnum/frequencemetre/trouver_calibre.vhd".
+WARNING:Xst:647 - Input <mHz> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 3-bit register for signal <calibre>.
+    Found 3-bit register for signal <puissance>.
+    Found 2-bit register for signal <position_point>.
+    Found 24-bit comparator greatequal for signal <calibre$cmp_ge0000> created at line 58.
+    Found 24-bit comparator greatequal for signal <calibre$cmp_ge0001> created at line 58.
+    Found 24-bit comparator greatequal for signal <calibre$cmp_ge0002> created at line 59.
+    Found 24-bit comparator greatequal for signal <calibre$cmp_ge0003> created at line 60.
+    Found 24-bit comparator greatequal for signal <calibre$cmp_ge0004> created at line 61.
+    Found 24-bit comparator greatequal for signal <calibre$cmp_ge0005> created at line 62.
+    Found 24-bit comparator greatequal for signal <calibre$cmp_ge0006> created at line 63.
+    Found 24-bit comparator greatequal for signal <calibre$cmp_ge0007> created at line 64.
+    Found 24-bit comparator less for signal <puissance$cmp_lt0000> created at line 64.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+	inferred   9 Comparator(s).
+Unit <trouver_calibre> synthesized.
+
+
+Synthesizing Unit <trouver_digit>.
+    Related source file is "D:/2EN/FM-PROJnum/frequencemetre/trouver_digit.vhd".
+    Found finite state machine <FSM_0> for signal <etatp>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 6                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | rst                       (negative)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | init                                           |
+    | Power Up State     | init                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 4-bit register for signal <digit>.
+    Found 1-of-4 decoder for signal <selecteur>.
+    Found 24-bit register for signal <comp>.
+    Found 24-bit adder for signal <comp$addsub0000> created at line 134.
+    Found 24-bit comparator lessequal for signal <comp$cmp_le0000> created at line 134.
+    Found 24-bit comparator greatequal for signal <etatp$cmp_ge0000> created at line 80.
+    Found 24-bit comparator less for signal <etatp$cmp_lt0000> created at line 73.
+    Found 2-bit comparator equal for signal <point_on$cmp_eq0000> created at line 155.
+    Found 4-bit register for signal <Sdigit>.
+    Found 4-bit adder for signal <Sdigit$addsub0000> created at line 122.
+    Found 24-bit comparator greatequal for signal <Sdigit$cmp_ge0000> created at line 122.
+    Found 24-bit register for signal <Sfrequence>.
+    Found 24-bit subtractor for signal <Sfrequence$addsub0000> created at line 119.
+    Found 3-bit register for signal <Spuissance>.
+    Found 3-bit subtractor for signal <Spuissance$addsub0000> created at line 127.
+    Found 2-bit register for signal <step>.
+    Found 2-bit subtractor for signal <step$addsub0000> created at line 126.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  61 D-type flip-flop(s).
+	inferred   5 Adder/Subtractor(s).
+	inferred   5 Comparator(s).
+	inferred   1 Decoder(s).
+Unit <trouver_digit> synthesized.
+
+
+Synthesizing Unit <afficheur>.
+    Related source file is "D:/2EN/FM-PROJnum/frequencemetre/afficheur.vhf".
+Unit <afficheur> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 5
+ 2-bit subtractor                                      : 1
+ 24-bit adder                                          : 1
+ 24-bit subtractor                                     : 1
+ 3-bit subtractor                                      : 1
+ 4-bit adder                                           : 1
+# Registers                                            : 9
+ 2-bit register                                        : 2
+ 24-bit register                                       : 2
+ 3-bit register                                        : 3
+ 4-bit register                                        : 2
+# Comparators                                          : 14
+ 2-bit comparator equal                                : 1
+ 24-bit comparator greatequal                          : 10
+ 24-bit comparator less                                : 2
+ 24-bit comparator lessequal                           : 1
+# Decoders                                             : 1
+ 1-of-4 decoder                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <XLXI_5/etatp/FSM> on signal <etatp[1:6]> with one-hot encoding.
+--------------------------
+ State        | Encoding
+--------------------------
+ init         | 000001
+ calc_digit   | 001000
+ attente      | 100000
+ affiche      | 010000
+ calc_comp    | 000010
+ soustraction | 000100
+--------------------------
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 5
+ 2-bit subtractor                                      : 1
+ 24-bit adder                                          : 1
+ 24-bit subtractor                                     : 1
+ 3-bit subtractor                                      : 1
+ 4-bit adder                                           : 1
+# Registers                                            : 69
+ Flip-Flops                                            : 69
+# Comparators                                          : 14
+ 2-bit comparator equal                                : 1
+ 24-bit comparator greatequal                          : 10
+ 24-bit comparator less                                : 2
+ 24-bit comparator lessequal                           : 1
+# Decoders                                             : 1
+ 1-of-4 decoder                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <afficheur> ...
+
+Optimizing unit <trouver_calibre> ...
+
+Optimizing unit <trouver_digit> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block afficheur, actual ratio is 3.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 75
+ Flip-Flops                                            : 75
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : afficheur.ngr
+Top Level Output File Name         : afficheur
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 42
+
+Cell Usage :
+# BELS                             : 522
+#      GND                         : 1
+#      INV                         : 15
+#      LUT1                        : 44
+#      LUT2                        : 100
+#      LUT2_D                      : 1
+#      LUT2_L                      : 3
+#      LUT3                        : 31
+#      LUT3_L                      : 3
+#      LUT4                        : 111
+#      LUT4_D                      : 6
+#      MUXCY                       : 156
+#      MUXF5                       : 2
+#      VCC                         : 1
+#      XORCY                       : 48
+# FlipFlops/Latches                : 75
+#      FD                          : 10
+#      FDE                         : 4
+#      FDR                         : 3
+#      FDRE                        : 3
+#      FDRS                        : 5
+#      FDRSE                       : 2
+#      FDS                         : 48
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 40
+#      IBUF                        : 25
+#      OBUF                        : 15
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-5 
+
+ Number of Slices:                      167  out of   4656     3%  
+ Number of Slice Flip Flops:             72  out of   9312     0%  
+ Number of 4 input LUTs:                314  out of   9312     3%  
+ Number of IOs:                          42
+ Number of bonded IOBs:                  41  out of    232    17%  
+    IOB Flip Flops:                       3
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 75    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 6.917ns (Maximum Frequency: 144.571MHz)
+   Minimum input arrival time before clock: 6.369ns
+   Maximum output required time after clock: 5.501ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.917ns (frequency: 144.571MHz)
+  Total number of paths / destination ports: 3474 / 121
+-------------------------------------------------------------------------
+Delay:               6.917ns (Levels of Logic = 13)
+  Source:            XLXI_5/comp_0 (FF)
+  Destination:       XLXI_5/comp_19 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: XLXI_5/comp_0 to XLXI_5/comp_19
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              5   0.514   0.690  XLXI_5/comp_0 (XLXI_5/comp_0)
+     LUT4:I0->O            1   0.612   0.000  XLXI_5/Mcompar_comp_cmp_le0000_lut<0> (XLXI_5/Mcompar_comp_cmp_le0000_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  XLXI_5/Mcompar_comp_cmp_le0000_cy<0> (XLXI_5/Mcompar_comp_cmp_le0000_cy<0>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_5/Mcompar_comp_cmp_le0000_cy<1> (XLXI_5/Mcompar_comp_cmp_le0000_cy<1>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_5/Mcompar_comp_cmp_le0000_cy<2> (XLXI_5/Mcompar_comp_cmp_le0000_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_5/Mcompar_comp_cmp_le0000_cy<3> (XLXI_5/Mcompar_comp_cmp_le0000_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_5/Mcompar_comp_cmp_le0000_cy<4> (XLXI_5/Mcompar_comp_cmp_le0000_cy<4>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_5/Mcompar_comp_cmp_le0000_cy<5> (XLXI_5/Mcompar_comp_cmp_le0000_cy<5>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_5/Mcompar_comp_cmp_le0000_cy<6> (XLXI_5/Mcompar_comp_cmp_le0000_cy<6>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_5/Mcompar_comp_cmp_le0000_cy<7> (XLXI_5/Mcompar_comp_cmp_le0000_cy<7>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_5/Mcompar_comp_cmp_le0000_cy<8> (XLXI_5/Mcompar_comp_cmp_le0000_cy<8>)
+     MUXCY:CI->O          18   0.399   0.911  XLXI_5/Mcompar_comp_cmp_le0000_cy<9> (XLXI_5/comp_cmp_le0000)
+     LUT4_D:I3->O          6   0.612   0.599  XLXI_5/comp_mux0005<9>1_1 (XLXI_5/comp_mux0005<9>1)
+     LUT3:I2->O            1   0.612   0.357  XLXI_5/comp_mux0005<19>_SW0 (N84)
+     FDS:S                     0.795          XLXI_5/comp_19
+    ----------------------------------------
+    Total                      6.917ns (4.361ns logic, 2.556ns route)
+                                       (63.0% logic, 37.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 1192 / 53
+-------------------------------------------------------------------------
+Offset:              6.369ns (Levels of Logic = 13)
+  Source:            frequence<5> (PAD)
+  Destination:       XLXI_3/calibre_2 (FF)
+  Destination Clock: clk rising
+
+  Data Path: frequence<5> to XLXI_3/calibre_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             7   1.106   0.754  frequence_5_IBUF (frequence_5_IBUF)
+     LUT1:I0->O            1   0.612   0.000  XLXI_3/Mcompar_calibre_cmp_ge0000_cy<0>_1_rt (XLXI_3/Mcompar_calibre_cmp_ge0000_cy<0>_1_rt)
+     MUXCY:S->O            1   0.404   0.000  XLXI_3/Mcompar_calibre_cmp_ge0000_cy<0>_1 (XLXI_3/Mcompar_calibre_cmp_ge0000_cy<0>2)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_3/Mcompar_calibre_cmp_ge0000_cy<1>_1 (XLXI_3/Mcompar_calibre_cmp_ge0000_cy<1>2)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_3/Mcompar_calibre_cmp_ge0000_cy<2>_1 (XLXI_3/Mcompar_calibre_cmp_ge0000_cy<2>2)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_3/Mcompar_calibre_cmp_ge0000_cy<3>_1 (XLXI_3/Mcompar_calibre_cmp_ge0000_cy<3>2)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_3/Mcompar_calibre_cmp_ge0000_cy<4>_1 (XLXI_3/Mcompar_calibre_cmp_ge0000_cy<4>2)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_3/Mcompar_calibre_cmp_ge0000_cy<5>_1 (XLXI_3/Mcompar_calibre_cmp_ge0000_cy<5>2)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_3/Mcompar_calibre_cmp_ge0000_cy<6>_1 (XLXI_3/Mcompar_calibre_cmp_ge0000_cy<6>2)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_3/Mcompar_calibre_cmp_ge0000_cy<7>_1 (XLXI_3/Mcompar_calibre_cmp_ge0000_cy<7>1)
+     MUXCY:CI->O           6   0.399   0.721  XLXI_3/Mcompar_calibre_cmp_ge0000_cy<8>_0 (XLXI_3/calibre_cmp_ge0002)
+     LUT2:I0->O            3   0.612   0.520  XLXI_3/calibre_mux0009<1>1111 (XLXI_3/N9)
+     LUT4:I1->O            1   0.612   0.000  XLXI_3/puissance_mux0000<1>1 (XLXI_3/puissance_mux0000<1>)
+     FDRE:D                    0.268          XLXI_3/puissance_1
+    ----------------------------------------
+    Total                      6.369ns (4.374ns logic, 1.995ns route)
+                                       (68.7% logic, 31.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 43 / 15
+-------------------------------------------------------------------------
+Offset:              5.501ns (Levels of Logic = 2)
+  Source:            XLXI_5/step_0 (FF)
+  Destination:       selecteur<3> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: XLXI_5/step_0 to selecteur<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              9   0.514   0.849  XLXI_5/step_0 (XLXI_5/step_0)
+     LUT2:I0->O            1   0.612   0.357  XLXI_5/selecteur<0>1 (selecteur_0_OBUF)
+     OBUF:I->O                 3.169          selecteur_0_OBUF (selecteur<0>)
+    ----------------------------------------
+    Total                      5.501ns (4.295ns logic, 1.206ns route)
+                                       (78.1% logic, 21.9% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.47 secs
+ 
+--> 
+
+Total memory usage is 142848 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

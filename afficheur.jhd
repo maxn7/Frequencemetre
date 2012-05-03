@@ -1,0 +1,7 @@
+MODULE afficheur
+	SUBMODULE decodeur
+		INSTANCE XLXI_2
+	SUBMODULE trouver_calibre
+		INSTANCE XLXI_3
+	SUBMODULE trouver_digit
+		INSTANCE XLXI_5

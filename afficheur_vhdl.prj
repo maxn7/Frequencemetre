@@ -1,0 +1,4 @@
+vhdl work "D:\2EN\FM-PROJnum\frequencemetre\trouver_digit.vhd"
+vhdl work "D:\2EN\FM-PROJnum\frequencemetre\trouver_calibre.vhd"
+vhdl work "D:\2EN\FM-PROJnum\frequencemetre\decodeur.vhd"
+vhdl work "D:\2EN\FM-PROJnum\frequencemetre\afficheur.vhf"
