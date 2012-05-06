@@ -153,8 +153,8 @@ begin
 	end if;
 end process;
 
---dec_sel
-process(position_point)
+--point_sel
+process(position_point, step)
 begin
 	if(position_point = step) then point_on <='1';
 	else point_on <= '0';

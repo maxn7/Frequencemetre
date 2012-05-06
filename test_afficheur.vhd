@@ -80,7 +80,7 @@ BEGIN
    stim_proc: process
    begin	
 	mhz <= '0';
-	frequence <= X"000EEF";
+	frequence <= X"00FFFF";
 	
 	wait; 
    end process;
