@@ -17,7 +17,6 @@
         <signal name="mhz" />
         <signal name="frequence(23:0)" />
         <signal name="segments(6:0)" />
-        <signal name="XLXN_13(23:0)" />
         <port polarity="Output" name="selecteur(3:0)" />
         <port polarity="Output" name="point" />
         <port polarity="Input" name="clk" />
@@ -27,7 +26,7 @@
         <port polarity="Input" name="frequence(23:0)" />
         <port polarity="Output" name="segments(6:0)" />
         <blockdef name="trouver_digit">
-            <timestamp>2012-5-6T12:26:51</timestamp>
+            <timestamp>2012-5-6T17:27:13</timestamp>
             <rect width="352" x="64" y="-320" height="320" />
             <line x2="0" y1="-288" y2="-288" x1="64" />
             <line x2="0" y1="-224" y2="-224" x1="64" />
@@ -44,7 +43,7 @@
             <line x2="480" y1="-32" y2="-32" x1="416" />
         </blockdef>
         <blockdef name="trouver_calibre">
-            <timestamp>2012-5-6T12:26:59</timestamp>
+            <timestamp>2012-5-6T17:27:20</timestamp>
             <rect width="368" x="64" y="-256" height="256" />
             <line x2="0" y1="-224" y2="-224" x1="64" />
             <line x2="0" y1="-160" y2="-160" x1="64" />
@@ -59,7 +58,7 @@
             <line x2="496" y1="-32" y2="-32" x1="432" />
         </blockdef>
         <blockdef name="decodeur">
-            <timestamp>2012-5-6T12:27:3</timestamp>
+            <timestamp>2012-5-6T17:27:27</timestamp>
             <rect width="256" x="64" y="-64" height="64" />
             <rect width="64" x="0" y="-44" height="24" />
             <line x2="0" y1="-32" y2="-32" x1="64" />

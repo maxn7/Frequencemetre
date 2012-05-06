@@ -66,7 +66,7 @@ begin
 		when init => etatf <= calc_comp;
 		
 		when calc_comp => etatf <= soustraction;
-
+		
 		when soustraction => etatf <= calc_digit;
 		
 		when calc_digit => 
@@ -117,12 +117,15 @@ if(clk'event and clk='1') then
 				elsif(Spuissance="000") then comp <= X"000001"; --10^0
 				else comp <= X"000001"; --10^0
 				end if;
+				
 			
-	when soustraction => Sfrequence <= Sfrequence - comp;
+	when soustraction => if(Sfrequence >= comp) then Sfrequence <= Sfrequence - comp;
+								else Sdigit <= "0000";
+								end if;
+
 	
 	when calc_digit => 
 			if(Sfrequence >= comp) then Sdigit <= Sdigit + 1;
-			--elsif(Sfrequence = comp)  then Sdigit <= Sdigit + 1;
 			end if;
 			
 	when affiche => 
