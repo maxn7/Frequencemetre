@@ -44,7 +44,7 @@ end trouver_digit;
 
 architecture Behavioral of trouver_digit is
 
-type etat is (init,calc_digit,attente,affiche,calc_comp,soustraction);
+type etat is (init,calc_digit,attente, incremente,affiche,calc_comp,soustraction);
 signal etatf : etat; --etat futur
 signal etatp : etat; --etat present
 
@@ -71,18 +71,20 @@ begin
 		
 		when calc_digit => 
 			if(Sfrequence < comp) then etatf <= affiche;
-			else etatf <= calc_digit;
+			else etatf <= soustraction;
 			end if;
 
 		when affiche => etatf<= attente; 
 		
 		when attente =>
-			if(comp -->= X"00C350") then 
-				if(step=0) then etatf <= init;
+			if(comp = X"00C350") then
+				if(step = "00") then etatf <= init;
 				else etatf <= calc_comp;
 				end if;
-			else etatf <= attente;
+			else etatf <= incremente;
 			end if;
+			
+		when incremente => etatf <= attente;
 			
 		when others => etatf <= init;
 		
@@ -103,9 +105,9 @@ begin
 if(clk'event and clk='1') then
 	
 	case etatp is
-	when init => step <= "11"; Sfrequence <= frequence; Spuissance<=puissance;
+	when init => step <= "00"; Sfrequence <= frequence; Spuissance<=puissance;
 	
-	when calc_comp => Sdigit <= "0000"; 
+	when calc_comp => Sdigit <= "0001";
 				if(Spuissance="110") then comp <= X"0F4240"; --10^6
 				elsif(Spuissance="101") then comp <= X"0186A0"; --10^5
 				elsif(Spuissance="100") then comp <= X"002710"; --10^4
@@ -119,7 +121,8 @@ if(clk'event and clk='1') then
 	when soustraction => Sfrequence <= Sfrequence - comp;
 	
 	when calc_digit => 
-			if Sfrequence >= comp then Sdigit <= Sdigit + 1;
+			if(Sfrequence >= comp) then Sdigit <= Sdigit + 1;
+			--elsif(Sfrequence = comp)  then Sdigit <= Sdigit + 1;
 			end if;
 			
 	when affiche => 
@@ -130,10 +133,11 @@ if(clk'event and clk='1') then
 			--dec_sel affiche valeur
 			--dec_point affiche point	
 			
-	when attente =>
-			if(comp --<= X"00C350") then 	comp <= comp + 1;
-			end if;
+	when incremente =>
+			comp <= comp + 1; -- c'est le bloc F qui vérifie si on dépasse la valeur
 	
+	when others => 
+			
 	end case;
 
 end if;	

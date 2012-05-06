@@ -1,4 +1,4 @@
--- Vhdl test bench created from schematic D:\2EN\FM-PROJnum\frequencemetre\afficheur.sch - Wed May 02 17:22:58 2012
+-- Vhdl test bench created from schematic /home/max/ProjetNumerique/frequencemetre/afficheur.sch - Sun May  6 15:15:39 2012
 --
 -- Notes: 
 -- 1) This testbench template has been automatically generated using types
@@ -15,10 +15,6 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
-use IEEE.STD_LOGIC_UNSIGNED.ALL;
-use IEEE.STD_LOGIC_ARITH.ALL;
-
-
 LIBRARY UNISIM;
 USE UNISIM.Vcomponents.ALL;
 ENTITY afficheur_afficheur_sch_tb IS
@@ -26,71 +22,67 @@ END afficheur_afficheur_sch_tb;
 ARCHITECTURE behavioral OF afficheur_afficheur_sch_tb IS 
 
    COMPONENT afficheur
-   PORT( calibre	:	OUT	STD_LOGIC_VECTOR (2 DOWNTO 0); 
+   PORT( selecteur	:	OUT	STD_LOGIC_VECTOR (3 DOWNTO 0); 
           point	:	OUT	STD_LOGIC; 
           clk	:	IN	STD_LOGIC; 
           rst	:	IN	STD_LOGIC; 
+          calibre	:	OUT	STD_LOGIC_VECTOR (2 DOWNTO 0); 
           mhz	:	IN	STD_LOGIC; 
           frequence	:	IN	STD_LOGIC_VECTOR (23 DOWNTO 0); 
-          segments	:	OUT	STD_LOGIC_VECTOR (6 DOWNTO 0); 
-          selecteur	:	OUT	STD_LOGIC_VECTOR (3 DOWNTO 0));
+          segments	:	OUT	STD_LOGIC_VECTOR (6 DOWNTO 0));
    END COMPONENT;
 
-   SIGNAL calibre	:	STD_LOGIC_VECTOR (2 DOWNTO 0);
+   SIGNAL selecteur	:	STD_LOGIC_VECTOR (3 DOWNTO 0);
    SIGNAL point	:	STD_LOGIC;
    SIGNAL clk	:	STD_LOGIC;
    SIGNAL rst	:	STD_LOGIC;
+   SIGNAL calibre	:	STD_LOGIC_VECTOR (2 DOWNTO 0);
    SIGNAL mhz	:	STD_LOGIC;
    SIGNAL frequence	:	STD_LOGIC_VECTOR (23 DOWNTO 0);
    SIGNAL segments	:	STD_LOGIC_VECTOR (6 DOWNTO 0);
-   SIGNAL selecteur	:	STD_LOGIC_VECTOR (3 DOWNTO 0);
 
+   -- Clock period definitions
+   constant clk_period : time := 20 ns;
+	
 BEGIN
 
    UUT: afficheur PORT MAP(
-		calibre => calibre, 
+		selecteur => selecteur, 
 		point => point, 
 		clk => clk, 
 		rst => rst, 
+		calibre => calibre, 
 		mhz => mhz, 
 		frequence => frequence, 
-		segments => segments, 
-		selecteur => selecteur
+		segments => segments
    );
-
--- *** Test Bench - User Defined Section ***
-   clk_process : PROCESS
-   BEGIN
+	
+-- Clock process definitions
+   clk_process :process
+   begin
 		clk <= '0';
-      wait for 10 ns;
+		wait for clk_period/2;
 		clk <= '1';
-		wait for 10 ns;
-   END PROCESS;
-	
-	init_process : process
-	begin
-		rst <= '0';
-		mhz <= '0';
-		frequence <= X"00000C";
-		wait for 50 ns;
-		rst <= '1';
-      wait;
-	end process;
-	
---	test_process : process
---	begin
---	
---		if(rst='0') then frequence <= X"000000" ;
---		else frequence <= frequence + X"000001";
--- 	end if;
---		
---		
---		wait;
---		
---	end process;
-	
-	
--- *** End Test Bench - User Defined Section ***
+		wait for clk_period/2;
+   end process;
+ 
 
+   -- Init process
+   init_proc: process
+   begin		
+      rst <= '0';-- hold reset state for 100 ns.
+      wait for 50 ns;	
+      rst <= '1';
+      wait;
+   end process;
+	
+	 -- stimulus process
+   stim_proc: process
+   begin	
+	mhz <= '0';
+	frequence <= X"000EEF";
+	
+	wait; 
+   end process;
 
 END;
