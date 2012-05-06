@@ -1,0 +1,21 @@
+net "rst" loc = "B18";
+net "clk" loc = "B8";
+
+
+net "segments[0]" loc = "L18";
+net "segments[1]" loc = "F18";
+net "segments[2]" loc = "D17";
+net "segments[3]" loc = "D16";
+net "segments[4]" loc = "G14";
+net "segments[5]" loc = "J17";
+net "segments[6]" loc = "H14";
+net "point" loc = "C17";
+
+net "selecteur[0]" loc = "F15";
+net "selecteur[1]" loc = "C18";
+net "selecteur[2]" loc = "H17";
+net "selecteur[3]" loc = "F17";
+
+net "calibre[0]" loc = "J14";
+net "calibre[1]" loc = "J15";
+net "calibre[2]" loc = "K15";
