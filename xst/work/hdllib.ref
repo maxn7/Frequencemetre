@@ -1,8 +1,0 @@
-EN trouver_digit NULL D:/2EN/FM-PROJnum/frequencemetre/trouver_digit.vhd sub00/vhpl04 1335974264
-AR decodeur behavioral D:/2EN/FM-PROJnum/frequencemetre/decodeur.vhd sub00/vhpl01 1335974261
-AR trouver_digit behavioral D:/2EN/FM-PROJnum/frequencemetre/trouver_digit.vhd sub00/vhpl05 1335974265
-AR afficheur behavioral D:/2EN/FM-PROJnum/frequencemetre/afficheur.vhf sub00/vhpl07 1335974267
-EN trouver_calibre NULL D:/2EN/FM-PROJnum/frequencemetre/trouver_calibre.vhd sub00/vhpl02 1335974262
-AR trouver_calibre behavioral D:/2EN/FM-PROJnum/frequencemetre/trouver_calibre.vhd sub00/vhpl03 1335974263
-EN afficheur NULL D:/2EN/FM-PROJnum/frequencemetre/afficheur.vhf sub00/vhpl06 1335974266
-EN decodeur NULL D:/2EN/FM-PROJnum/frequencemetre/decodeur.vhd sub00/vhpl00 1335974260

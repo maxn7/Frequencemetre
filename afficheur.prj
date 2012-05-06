@@ -1,4 +1,0 @@
-vhdl work "trouver_digit.vhd"
-vhdl work "trouver_calibre.vhd"
-vhdl work "decodeur.vhd"
-vhdl work "afficheur.vhf"
