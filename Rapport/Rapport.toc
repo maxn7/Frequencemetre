@@ -1,0 +1,14 @@
+\select@language {french}
+\contentsline {section}{\numberline {1}Objectifs}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}Rappel du cahier des charges}{2}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Nos choix}{2}{subsection.1.2}
+\contentsline {section}{\numberline {2}Conception du syst\IeC {\`e}me}{3}{section.2}
+\contentsline {subsection}{\numberline {2.1}Pr\IeC {\'e}sentation du syst\IeC {\`e}me}{3}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Pr\IeC {\'e}sentation des sous Modules}{3}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Sch\IeC {\'e}ma bloc}{3}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Machine d'\IeC {\'e}tat}{3}{subsubsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.3}R\IeC {\'e}sulat de simulation}{3}{subsubsection.2.2.3}
+\contentsline {subsection}{\numberline {2.3}Performance du syst\IeC {\`e}me}{3}{subsection.2.3}
+\contentsline {section}{\numberline {3}Bilan}{4}{section.3}
+\contentsline {section}{\numberline {A}Manuel d'utilisateur}{5}{appendix.A}
+\contentsline {section}{\numberline {A}Extrait de code VHDL}{6}{appendix.A}
