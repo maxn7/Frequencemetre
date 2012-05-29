@@ -1,0 +1,105 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[frenchb]{babel}
+
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{epsfig}
+\usepackage {eurosym}
+
+\usepackage{float}
+
+\geometry{a4paper,tmargin=2cm,bmargin=2cm,lmargin=1.5cm,rmargin=1cm,headheight=2.2cm,headsep=0.5cm,footskip=1cm}
+\columnsep=0.6cm
+
+\graphicspath{{images/}} 
+
+\usepackage{listings}
+\usepackage{color}
+\usepackage{xcolor}
+
+\lstset{columns=flexible,keepspaces=true, breaklines,breakindent=0pt} 
+
+
+\lstset{language=VHDL,
+basicstyle=\ttfamily\footnotesize,
+breaklines, 
+keywordstyle=\bfseries\color{blue},
+stringstyle=\color{red},
+commentstyle=\color{blue!20!black!30!green},
+morecomment=[s][\color{black}]{/**}{*/},
+numbers=left,
+numberstyle=\tiny\color{black},
+stepnumber=2,
+numbersep=10pt,
+tabsize=4,
+showspaces=false,
+showstringspaces=false}
+
+
+\fancypagestyle{plain}{
+% noms des respo   dans le bas de page                                            
+\lfoot{Projet de VHDL}
+\rfoot{M.Morin J.Fourmann}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{}}
+% Titre a compl»ter
+\title{\textbf{ \huge{Projet de VHDL}}  \\{\Large Réalisation d'un Fréquencemètre}}
+
+\author{
+\textsc{Jérémie Fourmann} (Promo 2013 - Eléctronique)\\ %mettre votre nom
+\textsc{Maxime Morin} (Promo 2013 - Eléctronique)\\ %mettre votre nom
+%\textsc{ddd dddd} (Promo - departement - respo)     %2 nom
+}
+
+\graphicspath{{images/}}
+
+\begin{document}
+
+\pagestyle{plain}
+
+\maketitle
+\begin{center}
+\includegraphics[width=6cm]{inp-enseeiht.pdf}   
+\end{center}
+
+\vspace{1cm}
+\renewcommand{\contentsname}{Plan}
+\tableofcontents
+\vspace{2cm}
+
+\newpage
+\section{Objectifs}
+ 
+\subsection{Rappel du cahier des charges}
+\subsection{Nos choix}
+
+\newpage
+\section{Conception du système}
+\subsection{Présentation du système}
+\subsection{Présentation des sous Modules}
+\subsubsection{Schéma bloc}
+\subsubsection{Machine d'état}
+\subsubsection{Résulat de simulation}
+
+\subsection{Performance du système}
+
+\newpage
+\section{Bilan}
+
+\newpage
+\appendix 
+\section{Manuel utilisateur}
+
+\newpage
+\appendix 
+\section{Extrait de code VHDL}
+\lstinputlisting{../machine_etat.vhd}
+\end{document}
