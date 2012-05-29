@@ -90,19 +90,20 @@ il faudra changer de méthode de mesure quand la fréquence dépassera une certa
 \end{description}
 \vspace{.5cm}
 \emph{RQ: Par ailleurs notre système affichera un message d'alerte quand le signal mesuré dépasse la plage de fréquence admise.}
+
 \subsection{Nos choix}
 \subsubsection{Choix de la validité des méthodes de mesures}
 Nous avons deux méthodes de mesures à notre disposition : méthode étalon et méthode échantillonage.\\
 \begin{figure}[H]
 \begin{center}
-	\includegraphics[scale=.5]{etalon.png}
+	\includegraphics[scale=.3]{etalon.png}
 	\caption{Métode étalon}
 \end{center}
 \end{figure}
 
 \begin{figure}[H]
 \begin{center}
-	\includegraphics[scale=.5]{ech.png}
+	\includegraphics[scale=.3]{ech.png}
 	\caption{Méthode échantillonage}
 \end{center}
 \end{figure}
@@ -110,14 +111,29 @@ Ces deux méthodes ne sont pas meilleur l'une que l'autre, elles sont complémen
 En effet pour un signal de fréquence élevé nous utiliseron la méthode étalon, elle permet d'avoir le maximum de précision.\\
 En revanche à basse fréquence cette méthode ne peut s'apliquer convenablement, nous utilisons alors la méthode échantillonage.\\
 
-Il faut donc trouver la valeur pour laquelle on change de méthode de meusure. Nous allons tracer la précision en fonction de la fréquence pour 
-les deux méthodes, à partir de cette courbe nous choisirons la valeur de basculement.
+Il faut donc trouver la valeur pour laquelle on change de méthode de mesure. Nous allons tracer la précision en fonction de la fréquence pour 
+les deux méthodes\\
+On a :
+\begin{equation*}
+ Precision_{BF}=\frac{F_{clk}}{F_{signal}}
+\end{equation*}
+\begin{equation*}
+ Precision_{HF}=\frac{F_{signal}}{F_{étalon}}
+\end{equation*}
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[scale=.5]{graphMethode.png}
+	\caption{Précision des deux méthodes}
+\end{center}
+\end{figure}
+On s'aperçoit que pour avoir le maximun de précision il faut changer de méthode aux alentours de 7 KHz. 
 
 \subsubsection{Choix de la conception en machine d'état}
 Notre conception étant entièrement synchrone, chaque sous module de notre sytème sera une machine d'état avec le bloc M et G synchronisé sur
 la clock du FPGA.\\
 Cette conception en machine d'état nous assure une implémentation adapté aux fonctionement du FPGA.\\ 
-Par ailleurs nous avons aussi une meilleur lisibilité de notre programme et une meilleur facon de débugger car nous avons accès à l'état de notre machine lors des simulation.\\
+Par ailleurs nous avons aussi une meilleur lisibilité de notre programme et une meilleur facon de débugger car nous avons accès à l'état de notre machine lors des simulations.\\
 \newpage
 \section{Conception du système}
 
@@ -133,11 +149,28 @@ Par ailleurs nous avons aussi une meilleur lisibilité de notre programme et une
 \section{Bilan}
 
 \newpage
-\appendix 
+\appendix
 \section{Manuel d'utilisateur}
+\subsection{Introduction}
+L'utilisateur pourra utilisé le projet soit en utilisant le component Fréquencemètre pour l'inclure dans un autre projet soit l'utilisé directement sur la Nexys 2.
 
+\subsection{Component VHDL}
+Notre projet peut se résumer en un seul component suivant :
+
+
+\subsection{Implémentation sur Nexys 2}
+En chargent le .bit, l'utilisateur pourra utilisé le fréquencemètre.
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[scale=.5]{fpga.png}
+	\caption{Implémentation sur carte Nexys 2}
+\end{center}
+\end{figure}
+
+\subsection{Fichier contrainte}
+L'utilisateur pourra édité le fichier de contraintes selon ses besoins et ressources disponible.
+\lstinputlisting{../frequencemetre.ucf}
 \newpage
-\appendix 
 \section{Extrait de code VHDL}
 \lstinputlisting{../machine_etat.vhd}
 \end{document}
