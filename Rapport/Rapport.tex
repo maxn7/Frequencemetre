@@ -77,12 +77,50 @@ showstringspaces=false}
 
 \newpage
 \section{Objectifs}
- 
+Le but de ce projet est de meusurer la fréquence d'un signal, le résultat de cette mesure sera affichée sur quatres afficheurs 7 segments.\\
 \subsection{Rappel du cahier des charges}
+Notre projet doit répondre aux contraintes suivantes :
+\begin{description}
+ \item[Changement de gamme automatique :] Pour garder le plus de précision possible, 
+il faudra changer de méthode de mesure quand la fréquence dépassera une certaine valeur (voir partie nos choix).
+\item[Rafraichissement de la mesure de 1s :] Permet de garder une bonne fluidité lorsque la fréquence est ammenée à changer.
+\item[Affichage sur 4 digits :] Permet d'avoir une précision correcte
+\item[Plage de fréquence de 1Hz à 10 MHz]
+\item[Affichage des calibres]  
+\end{description}
+\vspace{.5cm}
+\emph{RQ: Par ailleurs notre système affichera un message d'alerte quand le signal mesuré dépasse la plage de fréquence admise.}
 \subsection{Nos choix}
+\subsubsection{Choix de la validité des méthodes de mesures}
+Nous avons deux méthodes de mesures à notre disposition : méthode étalon et méthode échantillonage.\\
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[scale=.5]{etalon.png}
+	\caption{Métode étalon}
+\end{center}
+\end{figure}
 
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[scale=.5]{ech.png}
+	\caption{Méthode échantillonage}
+\end{center}
+\end{figure}
+Ces deux méthodes ne sont pas meilleur l'une que l'autre, elles sont complémentaires.\\
+En effet pour un signal de fréquence élevé nous utiliseron la méthode étalon, elle permet d'avoir le maximum de précision.\\
+En revanche à basse fréquence cette méthode ne peut s'apliquer convenablement, nous utilisons alors la méthode échantillonage.\\
+
+Il faut donc trouver la valeur pour laquelle on change de méthode de meusure. Nous allons tracer la précision en fonction de la fréquence pour 
+les deux méthodes, à partir de cette courbe nous choisirons la valeur de basculement.
+
+\subsubsection{Choix de la conception en machine d'état}
+Notre conception étant entièrement synchrone, chaque sous module de notre sytème sera une machine d'état avec le bloc M et G synchronisé sur
+la clock du FPGA.\\
+Cette conception en machine d'état nous assure une implémentation adapté aux fonctionement du FPGA.\\ 
+Par ailleurs nous avons aussi une meilleur lisibilité de notre programme et une meilleur facon de débugger car nous avons accès à l'état de notre machine lors des simulation.\\
 \newpage
 \section{Conception du système}
+
 \subsection{Présentation du système}
 \subsection{Présentation des sous Modules}
 \subsubsection{Schéma bloc}

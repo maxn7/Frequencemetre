@@ -1,6 +1,8 @@
 \BOOKMARK [1][-]{section.1}{Objectifs}{}
 \BOOKMARK [2][-]{subsection.1.1}{Rappel du cahier des charges}{section.1}
 \BOOKMARK [2][-]{subsection.1.2}{Nos choix}{section.1}
+\BOOKMARK [3][-]{subsubsection.1.2.1}{Choix de la validit\351 des m\351thodes de mesures}{subsection.1.2}
+\BOOKMARK [3][-]{subsubsection.1.2.2}{Choix de la conception en machine d'\351tat}{subsection.1.2}
 \BOOKMARK [1][-]{section.2}{Conception du syst\350me}{}
 \BOOKMARK [2][-]{subsection.2.1}{Pr\351sentation du syst\350me}{section.2}
 \BOOKMARK [2][-]{subsection.2.2}{Pr\351sentation des sous Modules}{section.2}
