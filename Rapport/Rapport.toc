@@ -13,4 +13,8 @@
 \contentsline {subsection}{\numberline {2.3}Performance du syst\IeC {\`e}me}{4}{subsection.2.3}
 \contentsline {section}{\numberline {3}Bilan}{5}{section.3}
 \contentsline {section}{\numberline {A}Manuel d'utilisateur}{6}{appendix.A}
-\contentsline {section}{\numberline {A}Extrait de code VHDL}{7}{appendix.A}
+\contentsline {subsection}{\numberline {A.1}Introduction}{6}{subsection.A.1}
+\contentsline {subsection}{\numberline {A.2}Component VHDL}{6}{subsection.A.2}
+\contentsline {subsection}{\numberline {A.3}Impl\IeC {\'e}mentation sur Nexys 2}{6}{subsection.A.3}
+\contentsline {subsection}{\numberline {A.4}Fichier contrainte}{6}{subsection.A.4}
+\contentsline {section}{\numberline {B}Extrait de code VHDL}{8}{appendix.B}
