@@ -1,6 +1,7 @@
 net "rst" loc = "R17";
 net "clk" loc = "B8";
-net "mhz" loc = "G18";
+net "mhz" loc = "R4";
+
 
 
 net "segments[0]" loc = "L18";
@@ -20,3 +21,6 @@ net "selecteur[3]" loc = "F17";
 net "calibre[0]" loc = "J14";
 net "calibre[1]" loc = "J15";
 net "calibre[2]" loc = "K15";
+
+net "entree" loc = "B4";
+

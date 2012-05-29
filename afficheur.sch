@@ -26,7 +26,7 @@
         <port polarity="Input" name="frequence(23:0)" />
         <port polarity="Output" name="segments(6:0)" />
         <blockdef name="trouver_digit">
-            <timestamp>2012-5-6T17:27:13</timestamp>
+            <timestamp>2012-5-9T12:2:46</timestamp>
             <rect width="352" x="64" y="-320" height="320" />
             <line x2="0" y1="-288" y2="-288" x1="64" />
             <line x2="0" y1="-224" y2="-224" x1="64" />
@@ -43,7 +43,7 @@
             <line x2="480" y1="-32" y2="-32" x1="416" />
         </blockdef>
         <blockdef name="trouver_calibre">
-            <timestamp>2012-5-6T17:27:20</timestamp>
+            <timestamp>2012-5-9T12:4:52</timestamp>
             <rect width="368" x="64" y="-256" height="256" />
             <line x2="0" y1="-224" y2="-224" x1="64" />
             <line x2="0" y1="-160" y2="-160" x1="64" />
@@ -58,7 +58,7 @@
             <line x2="496" y1="-32" y2="-32" x1="432" />
         </blockdef>
         <blockdef name="decodeur">
-            <timestamp>2012-5-6T17:27:27</timestamp>
+            <timestamp>2012-5-9T12:2:58</timestamp>
             <rect width="256" x="64" y="-64" height="64" />
             <rect width="64" x="0" y="-44" height="24" />
             <line x2="0" y1="-32" y2="-32" x1="64" />
@@ -116,12 +116,12 @@
             <wire x2="2240" y1="976" y2="976" x1="1776" />
         </branch>
         <branch name="clk">
-            <wire x2="432" y1="800" y2="800" x1="288" />
-            <wire x2="1056" y1="800" y2="800" x1="432" />
+            <wire x2="464" y1="800" y2="800" x1="288" />
+            <wire x2="1056" y1="800" y2="800" x1="464" />
             <wire x2="1056" y1="800" y2="976" x1="1056" />
             <wire x2="1296" y1="976" y2="976" x1="1056" />
-            <wire x2="432" y1="800" y2="1008" x1="432" />
-            <wire x2="496" y1="1008" y2="1008" x1="432" />
+            <wire x2="464" y1="800" y2="1008" x1="464" />
+            <wire x2="496" y1="1008" y2="1008" x1="464" />
         </branch>
         <branch name="rst">
             <wire x2="416" y1="752" y2="752" x1="288" />

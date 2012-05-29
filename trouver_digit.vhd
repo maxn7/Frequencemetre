@@ -1,35 +1,15 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date:    16:30:12 04/23/2012 
--- Design Name: 
--- Module Name:    trouver_digit - Behavioral 
--- Project Name: 
--- Target Devices: 
--- Tool versions: 
--- Description: 
+-- Jérémie Fourmann & Maxime Morin
+-- Projet Numérique 2EN 2012 - Réalisation d'un fréquencemètre
 --
--- Dependencies: 
---
--- Revision: 
--- Revision 0.01 - File Created
--- Additional Comments: 
---
+-- Fichier : trouver_digit.vhd
+-- Description : 
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 use IEEE.STD_LOGIC_ARITH.ALL;
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx primitives in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity trouver_digit is
     Port ( frequence : in  STD_LOGIC_VECTOR (23 downto 0);
@@ -45,8 +25,8 @@ end trouver_digit;
 architecture Behavioral of trouver_digit is
 
 type etat is (init,calc_digit,attente, incremente,affiche,calc_comp,soustraction);
-signal etatf : etat; --etat futur
-signal etatp : etat; --etat present
+signal etatf : etat; -- etat futur
+signal etatp : etat; -- etat present
 
 signal Spuissance : STD_LOGIC_VECTOR (2 downto 0); 
 signal Sfrequence : STD_LOGIC_VECTOR (23 downto 0);
@@ -54,11 +34,10 @@ signal comp : STD_LOGIC_VECTOR (23 downto 0);
 signal Sdigit : STD_LOGIC_VECTOR (3 downto 0);
 signal step : STD_LOGIC_VECTOR (1 downto 0);
 
-
 begin
 
 --Bloc F
-process(etatp, rst)
+process(etatp, rst,Sfrequence,comp,step)
 begin
 	if rst='0' then etatf <=init ;
 	else	
@@ -122,7 +101,6 @@ if(clk'event and clk='1') then
 	when soustraction => if(Sfrequence >= comp) then Sfrequence <= Sfrequence - comp;
 								else Sdigit <= "0000";
 								end if;
-
 	
 	when calc_digit => 
 			if(Sfrequence >= comp) then Sdigit <= Sdigit + 1;
@@ -133,11 +111,9 @@ if(clk'event and clk='1') then
 			Spuissance <= Spuissance - 1; 
 			comp <= X"000000"; --Le signal va servir pour le comptage
 			digit <= Sdigit;
-			--dec_sel affiche valeur
-			--dec_point affiche point	
 			
 	when incremente =>
-			comp <= comp + 1; -- c'est le bloc F qui vÃ©rifie si on dÃ©passe la valeur
+			comp <= comp + 1; -- c'est le bloc F qui vérifie si on dépasse la valeur
 	
 	when others => 
 			
@@ -149,18 +125,18 @@ end process;
 --dec_sel
 process(step)
 begin
-	if(step="11") then selecteur <= "1000";
-	elsif(step="10") then selecteur <= "0100";
-	elsif(step="01") then selecteur <= "0010";
-	else selecteur <= "0001";
+	if(step="00") then selecteur <= "0111";
+	elsif(step="01") then selecteur <= "1011";
+	elsif(step="10") then selecteur <= "1101";
+	else selecteur <= "1110";
 	end if;
 end process;
 
 --point_sel
 process(position_point, step)
 begin
-	if(position_point = step) then point_on <='1';
-	else point_on <= '0';
+	if(position_point = step) then point_on <='0';
+	else point_on <= '1';
 	end if;
 end process;
 
