@@ -216,15 +216,35 @@ de rentrer dans le chaier des chagres en tremes de précison et en terme de plag
 ferta appel aux sous modules suivants :
 
 \begin{description}
-  \item[rise_detect : ] Ce bloc permet de générer une impulsion durant exactement 1 cycle d'horloge lorsqu'un front montant est détecté
+  \item[rise\_detect : ] Ce bloc permet de générer une impulsion durant exactement 1 cycle d'horloge lorsqu'un front montant est détecté
   sur son entrée.
   \item[clk1hz : ] Module de division de fréquence permettant de générer une fréquence de 1 Hertz pour cadencer les échelons.
-  \item[compteur_fronts : ] Ce bloc compte le nombre de fronts du signal entre deux fronts du signal d'étalon, après chaque mesure,
+  \item[compteur\_fronts : ] Ce bloc compte le nombre de fronts du signal entre deux fronts du signal d'étalon, après chaque mesure,
   il met la valeur sur le bus de sortie et relance une nouvelle mesure.
 \end{description}
 
 
   \subsubsection{Machines d'états}
+
+\begin{figure}[H]
+   \begin{minipage}[b]{0.40\linewidth}
+      \centering \includegraphics[scale=.6]{machine_1Hz.png}
+      \caption{Machine d'état de Clock 1kHz}
+   \end{minipage}\hfill
+   \begin{minipage}[b]{0.40\linewidth}   
+      \centering \includegraphics[scale=.6]{machine_front.png}
+      \caption{Machine d'état de Rise\_detect}
+   \end{minipage}
+ \end{figure}
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[scale=.6]{machine_mesureEtalon.png}
+	\caption{Machine d'état de Compte\_etalon}
+\end{center}
+\end{figure}
+
+  
   \subsubsection{Résulat de simulation}
 
   \subsection{Mesure par échantillonnage}
@@ -244,10 +264,10 @@ de rentrer dans le chaier des chagres en tremes de précison et en terme de plag
 ferta appel aux sous modules suivants :
 
 \begin{description}
-  \item[rise_detect : ] Ce bloc permet de générer une impulsion durant exactement 1 cycle d'horloge lorsqu'un front montant est détecté
+  \item[rise\_detect : ] Ce bloc permet de générer une impulsion durant exactement 1 cycle d'horloge lorsqu'un front montant est détecté
   sur son entrée.
   \item[clk1hz : ] Module de division de fréquence permettant de générer une fréquence de 1 Hertz pour cadencer les échelons.
-  \item[compteur_fronts : ] Ce bloc compte le nombre de fronts du signal entre deux fronts du signal d'étalon, après chaque mesure,
+  \item[compteur\_fronts : ] Ce bloc compte le nombre de fronts du signal entre deux fronts du signal d'étalon, après chaque mesure,
   il met la valeur sur le bus de sortie et relance une nouvelle mesure.
 \end{description}
 

@@ -1,20 +1,35 @@
 \select@language {french}
-\contentsline {section}{\numberline {1}Objectifs}{2}{section.1}
-\contentsline {subsection}{\numberline {1.1}Rappel du cahier des charges}{2}{subsection.1.1}
-\contentsline {subsection}{\numberline {1.2}Nos choix}{2}{subsection.1.2}
-\contentsline {subsubsection}{\numberline {1.2.1}Choix de la validit\IeC {\'e} des m\IeC {\'e}thodes de mesures}{2}{subsubsection.1.2.1}
-\contentsline {subsubsection}{\numberline {1.2.2}Choix de la conception en machine d'\IeC {\'e}tat}{3}{subsubsection.1.2.2}
-\contentsline {section}{\numberline {2}Conception du syst\IeC {\`e}me}{4}{section.2}
-\contentsline {subsection}{\numberline {2.1}Pr\IeC {\'e}sentation du syst\IeC {\`e}me}{4}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Pr\IeC {\'e}sentation des sous Modules}{4}{subsection.2.2}
-\contentsline {subsubsection}{\numberline {2.2.1}Sch\IeC {\'e}ma bloc}{4}{subsubsection.2.2.1}
-\contentsline {subsubsection}{\numberline {2.2.2}Machine d'\IeC {\'e}tat}{4}{subsubsection.2.2.2}
-\contentsline {subsubsection}{\numberline {2.2.3}R\IeC {\'e}sulat de simulation}{4}{subsubsection.2.2.3}
-\contentsline {subsection}{\numberline {2.3}Performance du syst\IeC {\`e}me}{4}{subsection.2.3}
-\contentsline {section}{\numberline {3}Bilan}{5}{section.3}
-\contentsline {section}{\numberline {A}Manuel d'utilisateur}{6}{appendix.A}
-\contentsline {subsection}{\numberline {A.1}Introduction}{6}{subsection.A.1}
-\contentsline {subsection}{\numberline {A.2}Component VHDL}{6}{subsection.A.2}
-\contentsline {subsection}{\numberline {A.3}Impl\IeC {\'e}mentation sur Nexys 2}{6}{subsection.A.3}
-\contentsline {subsection}{\numberline {A.4}Fichier contrainte}{6}{subsection.A.4}
-\contentsline {section}{\numberline {B}Extrait de code VHDL}{8}{appendix.B}
+\contentsline {section}{\numberline {1}Objectifs}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}Rappel du cahier des charges}{3}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Nos choix}{3}{subsection.1.2}
+\contentsline {subsubsection}{\numberline {1.2.1}Choix de la validit\IeC {\'e} des m\IeC {\'e}thodes de mesures}{3}{subsubsection.1.2.1}
+\contentsline {subsubsection}{\numberline {1.2.2}Choix de la conception en machine d'\IeC {\'e}tat}{4}{subsubsection.1.2.2}
+\contentsline {section}{\numberline {2}Conception du syst\IeC {\`e}me}{5}{section.2}
+\contentsline {subsection}{\numberline {2.1}Pr\IeC {\'e}sentation du syst\IeC {\`e}me}{5}{subsection.2.1}
+\contentsline {paragraph}{}{5}{section*.2}
+\contentsline {paragraph}{}{5}{section*.3}
+\contentsline {paragraph}{}{5}{section*.4}
+\contentsline {paragraph}{}{5}{section*.5}
+\contentsline {subsection}{\numberline {2.2}Module d'affichage}{6}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Sch\IeC {\'e}ma bloc}{6}{subsubsection.2.2.1}
+\contentsline {paragraph}{}{6}{section*.6}
+\contentsline {subsubsection}{\numberline {2.2.2}Machines d'\IeC {\'e}tats}{7}{subsubsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.3}R\IeC {\'e}sulats de simulation}{7}{subsubsection.2.2.3}
+\contentsline {subsection}{\numberline {2.3}Mesure par \IeC {\'e}talon}{7}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Sch\IeC {\'e}ma bloc}{7}{subsubsection.2.3.1}
+\contentsline {paragraph}{}{7}{section*.7}
+\contentsline {subsubsection}{\numberline {2.3.2}Machines d'\IeC {\'e}tats}{8}{subsubsection.2.3.2}
+\contentsline {subsubsection}{\numberline {2.3.3}R\IeC {\'e}sulat de simulation}{9}{subsubsection.2.3.3}
+\contentsline {subsection}{\numberline {2.4}Mesure par \IeC {\'e}chantillonnage}{9}{subsection.2.4}
+\contentsline {subsubsection}{\numberline {2.4.1}Sch\IeC {\'e}ma bloc}{9}{subsubsection.2.4.1}
+\contentsline {paragraph}{}{9}{section*.8}
+\contentsline {subsubsection}{\numberline {2.4.2}Machines d'\IeC {\'e}tats}{9}{subsubsection.2.4.2}
+\contentsline {subsubsection}{\numberline {2.4.3}R\IeC {\'e}sulat de simulation}{9}{subsubsection.2.4.3}
+\contentsline {subsection}{\numberline {2.5}Performances du syst\IeC {\`e}me}{9}{subsection.2.5}
+\contentsline {section}{\numberline {3}Bilan}{10}{section.3}
+\contentsline {section}{\numberline {A}Manuel d'utilisateur}{11}{appendix.A}
+\contentsline {subsection}{\numberline {A.1}Introduction}{11}{subsection.A.1}
+\contentsline {subsection}{\numberline {A.2}Component VHDL}{11}{subsection.A.2}
+\contentsline {subsection}{\numberline {A.3}Impl\IeC {\'e}mentation sur Nexys 2}{11}{subsection.A.3}
+\contentsline {subsection}{\numberline {A.4}Fichier contrainte}{11}{subsection.A.4}
+\contentsline {section}{\numberline {B}Extrait de code VHDL}{13}{appendix.B}
