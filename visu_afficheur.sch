@@ -22,7 +22,7 @@
         <port polarity="Input" name="rst" />
         <port polarity="Input" name="mhz" />
         <blockdef name="generateur_nombre_24bits">
-            <timestamp>2012-5-6T17:44:54</timestamp>
+            <timestamp>2012-5-9T12:9:57</timestamp>
             <rect width="256" x="64" y="-128" height="128" />
             <line x2="0" y1="-96" y2="-96" x1="64" />
             <line x2="0" y1="-32" y2="-32" x1="64" />
@@ -30,7 +30,7 @@
             <line x2="384" y1="-96" y2="-96" x1="320" />
         </blockdef>
         <blockdef name="afficheur">
-            <timestamp>2012-5-6T17:31:16</timestamp>
+            <timestamp>2012-5-9T12:9:43</timestamp>
             <rect width="336" x="64" y="-256" height="256" />
             <line x2="0" y1="-224" y2="-224" x1="64" />
             <line x2="0" y1="-160" y2="-160" x1="64" />

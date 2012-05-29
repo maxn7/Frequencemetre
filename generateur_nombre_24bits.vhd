@@ -44,7 +44,7 @@ signal etatf : etat; --etat futur
 signal etatp : etat; --etat present
 
 signal timer  : STD_LOGIC_VECTOR (27 downto 0);
-signal nombre : STD_LOGIC_VECTOR (23 downto 0);
+signal nombre : STD_LOGIC_VECTOR (3 downto 0);
 
 
 begin
@@ -58,7 +58,7 @@ begin
 		when init => etatf <= attente;
 			
 		when attente =>
-			if(timer > X"2FAF080") then etatf <= calc_nombre;
+			if(timer > X"5F5E100") then etatf <= calc_nombre;
 			else etatf <= attente;
 			end if;
 
@@ -81,11 +81,11 @@ begin
 if(clk'event and clk='1') then
 	
 	case etatp is
-	when init => timer <= X"0000000"; nombre <= X"000400";
+	when init => timer <= X"0000000"; nombre <= X"0";
 
 	when attente => timer <= timer + 1;
 	
-	when calc_nombre => timer <= X"0000000"; nombre <= nombre (22 downto 0) & '0' ; 
+	when calc_nombre => timer <= X"0000000"; nombre <= nombre + 1 ; --nombre <= nombre (22 downto 0) & '0' ; 
 	
 	end case;
 
@@ -96,7 +96,12 @@ end process;
 process(nombre)
 begin
 
-sortie <= nombre;
+if(nombre= X"1") then sortie <= X"0003e9";
+elsif(nombre= X"2") then sortie <= X"002ff8";
+elsif(nombre= X"3") then sortie <= X"023ae2";
+elsif(nombre= X"4") then sortie <= X"11bb10";
+else sortie <= X"b14ea0";
+end if; 
 
 end process;
 
