@@ -276,9 +276,15 @@ ferta appel aux sous modules suivants :
   \subsubsection{Résulat de simulation}
 
 \subsection{Performances du système}
-
-
-
+Nous avons une suite de mesures à différentes fréquences pour regarder l'erreur commise. Une fois calibrage effectuer, on a une erreur maximale
+de 0.15\%, ce qui nous convient parfaitement.  
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[scale=.7]{mesure_erreur.png}
+	\caption{Erreur de mesure de nôtre fréquencemètre}
+\end{center}
+\end{figure}
+On s'aperçoit que l'on a un pic d'erreur aux alentours de 7KHz, fréquence à laquelle on bascule de méthode pour augmenter la précision.
 \newpage
 \section{Bilan}
 
@@ -286,11 +292,16 @@ ferta appel aux sous modules suivants :
 \appendix
 \section{Manuel d'utilisateur}
 \subsection{Introduction}
-L'utilisateur pourra utilisé le projet soit en utilisant le component Fréquencemètre pour l'inclure dans un autre projet soit l'utilisé directement sur la Nexys 2.
+L'utilisateur pourra utiliser le projet soit en utilisant le component Fréquencemètre pour l'inclure dans un autre projet soit l'utilisé directement sur la Nexys 2.
 
 \subsection{Component VHDL}
 Notre projet peut se résumer en un seul component suivant :
-
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[scale=1]{freqa0.png}
+	\caption{Component du projet fréquence}
+\end{center}
+\end{figure}
 
 \subsection{Implémentation sur Nexys 2}
 En chargent le .bit, l'utilisateur pourra utilisé le fréquencemètre.
@@ -305,6 +316,7 @@ En chargent le .bit, l'utilisateur pourra utilisé le fréquencemètre.
 L'utilisateur pourra édité le fichier de contraintes selon ses besoins et ressources disponible.
 \lstinputlisting{../frequencemetre.ucf}
 \newpage
-\section{Extrait de code VHDL}
-\lstinputlisting{../machine_etat.vhd}
+\section{Extrait code vhdl}
+\subsection{Module trouver-digit}
+\lstinputlisting{../trouver_digit.vhd}
 \end{document}
