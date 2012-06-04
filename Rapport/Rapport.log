@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.11.27)  29 MAY 2012 19:13
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.23)  4 JUN 2012 16:01
 entering extended mode
  %&-line parsing enabled.
 **Rapport.tex
@@ -512,42 +512,33 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \symrsfs=\mathgroup6
 )
-(/usr/share/texmf-texlive/tex/latex/graphics/epsfig.sty
-Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
-\epsfxsize=\dimen124
-\epsfysize=\dimen125
-)
-(/usr/share/texmf-texlive/tex/latex/eurosym/eurosym.sty
-Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
-\@eurobox=\box28
-)
 (/usr/share/texmf-texlive/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count113
 \float@exts=\toks24
-\float@box=\box29
+\float@box=\box28
 \@float@everytoks=\toks25
-\@floatcapt=\box30
+\@floatcapt=\box29
 )
 (/usr/share/texmf-texlive/tex/latex/listings/listings.sty
 \lst@mode=\count114
-\lst@gtempboxa=\box31
+\lst@gtempboxa=\box30
 \lst@token=\toks26
 \lst@length=\count115
-\lst@currlwidth=\dimen126
+\lst@currlwidth=\dimen124
 \lst@column=\count116
 \lst@pos=\count117
-\lst@lostspace=\dimen127
-\lst@width=\dimen128
+\lst@lostspace=\dimen125
+\lst@width=\dimen126
 \lst@newlines=\count118
 \lst@lineno=\count119
-\lst@maxwidth=\dimen129
+\lst@maxwidth=\dimen127
 
 (/usr/share/texmf-texlive/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 \c@lstnumber=\count120
 \lst@skipnumbers=\count121
-\lst@framebox=\box32
+\lst@framebox=\box31
 )
 (/usr/share/texmf-texlive/tex/latex/listings/listings.cfg
 File: listings.cfg 2007/02/22 1.4 listings configuration
@@ -606,13 +597,13 @@ LaTeX Info: Redefining \up on input line 64.
 (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count122
-\scratchdimen=\dimen130
-\scratchbox=\box33
+\scratchdimen=\dimen128
+\scratchbox=\box32
 \nofMPsegments=\count123
 \nofMParguments=\count124
 \everyMPshowfont=\toks27
 \MPscratchCnt=\count125
-\MPscratchDim=\dimen131
+\MPscratchDim=\dimen129
 \MPnumerator=\count126
 \everyMPtoPDFconversion=\toks28
 )
@@ -673,7 +664,7 @@ LaTeX Info: Redefining \pageref on input line 64.
 \@outlinefile=\write3
 \openout3 = `Rapport.out'.
 
-\AtBeginShipoutBox=\box34
+\AtBeginShipoutBox=\box33
 \c@lstlisting=\count128
 LaTeX Font Info:    Try loading font information for U+msa on input line 69.
  (/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
@@ -689,7 +680,7 @@ LaTeX Font Info:    Try loading font information for U+rsfs on input line 69.
 (/usr/share/texmf-texlive/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-<images/inp-enseeiht.pdf, id=111, 2333.71875pt x 387.4475pt>
+<images/inp-enseeiht.pdf, id=115, 2333.71875pt x 387.4475pt>
 File: images/inp-enseeiht.pdf Graphic file (type pdf)
 
 <use images/inp-enseeiht.pdf> (./Rapport.toc)
@@ -700,69 +691,48 @@ File: images/inp-enseeiht.pdf Graphic file (type pdf)
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/inp-enseeiht.pdf>
 ] [2]
-Underfull \hbox (badness 10000) in paragraph at lines 80--81
-
- []
-
-<images/etalon.png, id=161, 724.7075pt x 173.64874pt>
+<images/etalon.png, id=166, 724.7075pt x 173.64874pt>
 File: images/etalon.png Graphic file (type png)
  <use images/etalon.png>
-Underfull \hbox (badness 10000) in paragraph at lines 96--102
-
- []
-
-<images/ech.png, id=162, 724.7075pt x 164.615pt>
+<images/ech.png, id=167, 724.7075pt x 164.615pt>
 File: images/ech.png Graphic file (type png)
- <use images/ech.png>
-Underfull \hbox (badness 10000) in paragraph at lines 110--113
+ <use images/ech.png> [3pdfTeX warning (ext4): destination with the same identi
+fier (name{figure.1}) has been already used, duplicate ignored
 
- []
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.131   \begin{equation*}
+                         pdfTeX warning (ext4): destination with the same ident
+ifier (name{figure.2}) has been already used, duplicate ignored
 
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.131   \begin{equation*}
+                          <./images/etalon.png (PNG copy)> <./images/ech.png (P
+NG copy)>]
 
-LaTeX Warning: Command \' invalid in math mode on input line 121.
+LaTeX Warning: Command \' invalid in math mode on input line 135.
 
 Missing character: There is no é in font cmr8!
-[3pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
-has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.122 \end{equation*}
-                     pdfTeX warning (ext4): destination with the same identifie
-r (name{figure.2}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.122 \end{equation*}
-                      <./images/etalon.png (PNG copy)> <./images/ech.png (PNG c
-opy)>] <images/graphMethode.png, id=175, 619.916pt x 485.815pt>
+<images/graphMethode.png, id=183, 619.916pt x 485.815pt>
 File: images/graphMethode.png Graphic file (type png)
 
-<use images/graphMethode.png>
-Underfull \hbox (badness 10000) in paragraph at lines 133--137
-
- []
-
-[4pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) 
-has been already used, duplicate ignored
+<use images/graphMethode.png> [4pdfTeX warning (ext4): destination with the sam
+e identifier (name{figure.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.137 \newpage
+l.155 \newpage
                <./images/graphMethode.png (PNG copy)>]
-<images/sch-freqa0.png, id=181, 120.6909pt x 128.6406pt>
+<images/sch-freqa0.png, id=193, 120.6909pt x 128.6406pt>
 File: images/sch-freqa0.png Graphic file (type png)
 
 <use images/sch-freqa0.png>
-<images/sch-frequencemetre.png, id=183, 544.9158pt x 213.9192pt>
+<images/sch-frequencemetre.png, id=195, 544.9158pt x 213.9192pt>
 File: images/sch-frequencemetre.png Graphic file (type png)
 
 <use images/sch-frequencemetre.png>
-Overfull \hbox (18.53845pt too wide) in paragraph at lines 156--157
- [] 
- []
-
-<images/sch-afficheur.png, id=184, 524.6802pt x 148.1535pt>
+<images/sch-afficheur.png, id=196, 524.6802pt x 148.1535pt>
 File: images/sch-afficheur.png Graphic file (type png)
 
 <use images/sch-afficheur.png> [5pdfTeX warning (ext4): destination with the sa
@@ -770,120 +740,176 @@ me identifier (name{figure.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.182 
+l.202 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.182 
+l.202 
        <./images/sch-freqa0.png> <./images/sch-frequencemetre.png>]
-<images/sch-etalon.png, id=197, 459.6372pt x 190.7928pt>
-File: images/sch-etalon.png Graphic file (type png)
+<images/machine_CalDigit.png, id=209, 399.4925pt x 548.0475pt>
+File: images/machine_CalDigit.png Graphic file (type png)
 
-<use images/sch-etalon.png> [6pdfTeX warning (ext4): destination with the same 
-identifier (name{figure.6}) has been already used, duplicate ignored
+<use images/machine_CalDigit.png> [6pdfTeX warning (ext4): destination with the
+ same identifier (name{figure.6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.211 
+l.226 
        <./images/sch-afficheur.png>]
-<images/machine_1Hz.png, id=205, 389.455pt x 481.8pt>
+<images/sch-etalon.png, id=218, 459.6372pt x 190.7928pt>
+File: images/sch-etalon.png Graphic file (type png)
+
+<use images/sch-etalon.png> [7pdfTeX warning (ext4): destination with the same 
+identifier (name{figure.7}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.241 
+       <./images/machine_CalDigit.png (PNG copy)>]
+<images/machine_1Hz.png, id=227, 389.455pt x 481.8pt>
 File: images/machine_1Hz.png Graphic file (type png)
 
 <use images/machine_1Hz.png>
-Overfull \hbox (23.12761pt too wide) in paragraph at lines 231--232
+Overfull \hbox (23.12761pt too wide) in paragraph at lines 261--262
  [][] 
  []
 
-<images/machine_front.png, id=206, 342.27875pt x 454.69875pt>
+<images/machine_front.png, id=228, 342.27875pt x 454.69875pt>
 File: images/machine_front.png Graphic file (type png)
 
-<use images/machine_front.png> [7pdfTeX warning (ext4): destination with the sa
-me identifier (name{figure.7}) has been already used, duplicate ignored
+<use images/machine_front.png> [8pdfTeX warning (ext4): destination with the sa
+me identifier (name{figure.8}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.239 
+l.269 
        <./images/sch-etalon.png>]
-<images/machine_mesureEtalon.png, id=215, 368.37625pt x 490.83376pt>
+<images/machine_mesureEtalon.png, id=236, 368.37625pt x 490.83376pt>
 File: images/machine_mesureEtalon.png Graphic file (type png)
 
 <use images/machine_mesureEtalon.png>
-File: images/sch-etalon.png Graphic file (type png)
- <use images/sch-etalon.png> [8pdfTeX warning (ext4): destination with the same
- identifier (name{figure.8}) has been already used, duplicate ignored
+<images/sch-echantillon.png, id=237, 489.9906pt x 115.632pt>
+File: images/sch-echantillon.png Graphic file (type png)
+
+<use images/sch-echantillon.png> [9pdfTeX warning (ext4): destination with the 
+same identifier (name{figure.9}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.259 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.
-9}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.259 
+l.289 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 10}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.259 
-       <./images/machine_1Hz.png (PNG copy)> <./images/machine_front.png (PNG c
-opy)> <./images/machine_mesureEtalon.png (PNG copy)>] [9pdfTeX warning (ext4): 
-destination with the same identifier (name{figure.11}) has been already used, d
-uplicate ignored
+l.289 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+11}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.282 \newpage
-              ] [10] <images/fpga.png, id=233, 718.685pt x 641.39626pt>
+l.289 
+       <./images/machine_1Hz.png (PNG copy)> <./images/machine_front.png (PNG c
+opy)> <./images/machine_mesureEtalon.png (PNG copy)>]
+<images/machine_compteurClk.png, id=245, 383.4325pt x 505.89pt>
+File: images/machine_compteurClk.png Graphic file (type png)
+
+<use images/machine_compteurClk.png>
+<images/machine_PertoFreq.png, id=246, 425.59pt x 479.7925pt>
+File: images/machine_PertoFreq.png Graphic file (type png)
+
+<use images/machine_PertoFreq.png> [10pdfTeX warning (ext4): destination with t
+he same identifier (name{figure.12}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.317 
+       <./images/sch-echantillon.png>]
+File: images/sch-frequencemetre.png Graphic file (type png)
+ <use images/sch-frequencemetre.png>
+Overfull \hbox (18.53845pt too wide) in paragraph at lines 326--327
+ [] 
+ []
+
+<images/machine_decision.png, id=254, 458.71375pt x 499.8675pt>
+File: images/machine_decision.png Graphic file (type png)
+
+<use images/machine_decision.png> [11pdfTeX warning (ext4): destination with th
+e same identifier (name{figure.13}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.339 \end{figure}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{figure.14}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.339 \end{figure}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{figure.15}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.339 \end{figure}
+                   <./images/machine_compteurClk.png (PNG copy)> <./images/mach
+ine_PertoFreq.png (PNG copy)>] [12pdfTeX warning (ext4): destination with the s
+ame identifier (name{figure.16}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.347 \newpage
+               <./images/machine_decision.png (PNG copy)>] [13]
+<images/fpga.png, id=274, 718.685pt x 641.39626pt>
 File: images/fpga.png Graphic file (type png)
-
-<use images/fpga.png>
+ <use images/fpga.png>
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 306.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 306.
+nput line 371.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 371.
 
- (/usr/share/texmf-texlive/tex/latex/base/t1cmtt.fd
+
+(/usr/share/texmf-texlive/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-(../frequencemetre.ucf [11pdfTeX warning (ext4): destination with the same iden
-tifier (name{figure.12}) has been already used, duplicate ignored
+) (../frequencemetre.ucf
+[14pdfTeX warning (ext4): destination with the same identifier (name{figure.17}
+) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.14 net 
-         "point" loc = "C17"; <./images/fpga.png (PNG copy)>]) [12]
+         "point" loc = "C17"; <./images/fpga.png (PNG copy)>]) [15]
 (../machine_etat.vhd
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <9> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 18.
- [13]) [14] (./Rapport.aux) ) 
+ [16]) [17] (./Rapport.aux) ) 
 Here is how much of TeX's memory you used:
- 9184 strings out of 495061
- 123824 string characters out of 1182620
- 448230 words of memory out of 3000000
- 11989 multiletter control sequences out of 15000+50000
+ 9138 strings out of 495061
+ 123519 string characters out of 1182621
+ 447462 words of memory out of 3000000
+ 11926 multiletter control sequences out of 15000+50000
  21648 words of font info for 58 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  38i,12n,43p,272b,1922s stack positions out of 5000i,500n,10000p,200000b,50000s
- </home/jeje/.texmf-var/fonts/pk/ljfour/jknappen/e
-c/ectt0900.600pk> </home/jeje/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0600.6
-00pk> </home/jeje/.texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1095.600pk> </home
-/jeje/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </home/jeje/.texmf
--var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/jeje/.texmf-var/fonts/p
-k/ljfour/jknappen/ec/ecrm1095.600pk> </home/jeje/.texmf-var/fonts/pk/ljfour/jkn
-appen/ec/ecbx1095.600pk> </home/jeje/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecb
-x1440.600pk> </home/jeje/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk>
- </home/jeje/.texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1200.600pk> </home/jeje
-/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </home/jeje/.texmf-var/
-fonts/pk/ljfour/jknappen/ec/ecbx2074.600pk></usr/share/texmf-texlive/fonts/type
-1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/type1/public/am
-sfonts/cm/cmmi8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cm
-r10.pfb>
-Output written on Rapport.pdf (14 pages, 877536 bytes).
+ </home/max/.texmf-var/fonts/pk/ljfour/jknappen/ec
+/ectt0900.600pk> </home/max/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0600.600
+pk> </home/max/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </home/ma
+x/.texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1095.600pk> </home/max/.texmf-var/
+fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/max/.texmf-var/fonts/pk/ljfo
+ur/jknappen/ec/ecrm1095.600pk> </home/max/.texmf-var/fonts/pk/ljfour/jknappen/e
+c/ecbx1095.600pk> </home/max/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.60
+0pk> </home/max/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/m
+ax/.texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1200.600pk> </home/max/.texmf-var
+/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </home/max/.texmf-var/fonts/pk/ljf
+our/jknappen/ec/ecbx2074.600pk></usr/share/texmf-texlive/fonts/type1/public/ams
+fonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cm
+mi8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
+r/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf
+-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on Rapport.pdf (17 pages, 1021136 bytes).
 PDF statistics:
- 840 PDF objects out of 1000 (max. 8388607)
- 178 named destinations out of 1000 (max. 500000)
- 277 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 867 PDF objects out of 1000 (max. 8388607)
+ 197 named destinations out of 1000 (max. 500000)
+ 310 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,13 +1,13 @@
 \BOOKMARK [1][-]{section.1}{Objectifs}{}
 \BOOKMARK [2][-]{subsection.1.1}{Rappel du cahier des charges}{section.1}
 \BOOKMARK [2][-]{subsection.1.2}{Nos choix}{section.1}
-\BOOKMARK [3][-]{subsubsection.1.2.1}{Choix de la validit\351 des m\351thodes de mesures}{subsection.1.2}
+\BOOKMARK [3][-]{subsubsection.1.2.1}{M\351thodes de mesures}{subsection.1.2}
 \BOOKMARK [3][-]{subsubsection.1.2.2}{Choix de la conception en machine d'\351tat}{subsection.1.2}
 \BOOKMARK [1][-]{section.2}{Conception du syst\350me}{}
 \BOOKMARK [2][-]{subsection.2.1}{Pr\351sentation du syst\350me}{section.2}
 \BOOKMARK [2][-]{subsection.2.2}{Module d'affichage}{section.2}
 \BOOKMARK [3][-]{subsubsection.2.2.1}{Sch\351ma bloc}{subsection.2.2}
-\BOOKMARK [3][-]{subsubsection.2.2.2}{Machines d'\351tats}{subsection.2.2}
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Machine d'\351tat}{subsection.2.2}
 \BOOKMARK [3][-]{subsubsection.2.2.3}{R\351sulats de simulation}{subsection.2.2}
 \BOOKMARK [2][-]{subsection.2.3}{Mesure par \351talon}{section.2}
 \BOOKMARK [3][-]{subsubsection.2.3.1}{Sch\351ma bloc}{subsection.2.3}
@@ -17,7 +17,8 @@
 \BOOKMARK [3][-]{subsubsection.2.4.1}{Sch\351ma bloc}{subsection.2.4}
 \BOOKMARK [3][-]{subsubsection.2.4.2}{Machines d'\351tats}{subsection.2.4}
 \BOOKMARK [3][-]{subsubsection.2.4.3}{R\351sulat de simulation}{subsection.2.4}
-\BOOKMARK [2][-]{subsection.2.5}{Performances du syst\350me}{section.2}
+\BOOKMARK [2][-]{subsection.2.5}{D\351cision}{section.2}
+\BOOKMARK [2][-]{subsection.2.6}{Performances du syst\350me}{section.2}
 \BOOKMARK [1][-]{section.3}{Bilan}{}
 \BOOKMARK [1][-]{appendix.A}{Manuel d'utilisateur}{}
 \BOOKMARK [2][-]{subsection.A.1}{Introduction}{appendix.A}

@@ -1,6 +1,6 @@
 ----------------------------------------------------------------------------------
--- Jérémie Fourmann & Maxime Morin
--- Projet Numérique 2EN 2012 - Réalisation d'un fréquencemètre
+-- Jeremie Fourmann & Maxime Morin
+-- Projet Numerique 2EN 2012 - Realisation d'un frequencemetre
 --
 -- Fichier : trouver_digit.vhd
 -- Description : 
@@ -113,7 +113,7 @@ if(clk'event and clk='1') then
 			digit <= Sdigit;
 			
 	when incremente =>
-			comp <= comp + 1; -- c'est le bloc F qui vérifie si on dépasse la valeur
+			comp <= comp + 1; -- c est le bloc F qui verifie si on depasse la valeur
 	
 	when others => 
 			
