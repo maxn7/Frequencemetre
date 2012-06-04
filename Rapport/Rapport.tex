@@ -16,7 +16,7 @@
 
 \usepackage{float}
 
-\geometry{a4paper,tmargin=2cm,bmargin=2cm,lmargin=1.5cm,rmargin=1cm,headheight=2.2cm,headsep=0.5cm,footskip=1cm}
+\geometry{a4paper,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm,headheight=2.2cm,headsep=0.5cm,footskip=1cm}
 \columnsep=0.6cm
 
 \graphicspath{{images/}} 
@@ -46,7 +46,7 @@ showstringspaces=false}
 
 \fancypagestyle{plain}{
 % noms des respo   dans le bas de page                                            
-\lfoot{Projet de VHDL}
+\lfoot{Projet Numérique 2012}
 \rfoot{M.Morin J.Fourmann}
 \renewcommand{\headrulewidth}{0pt}
 \fancyhead{}}
@@ -54,8 +54,8 @@ showstringspaces=false}
 \title{\textbf{ \huge{Projet de VHDL}}  \\{\Large Réalisation d'un Fréquencemètre}}
 
 \author{
-\textsc{Jérémie Fourmann} (Promo 2013 - Eléctronique)\\ %mettre votre nom
-\textsc{Maxime Morin} (Promo 2013 - Eléctronique)\\ %mettre votre nom
+\textsc{Jérémie Fourmann \& Maxime Morin}\\ %mettre votre nom
+\textsc{} (Promo 2013 - Eléctronique)\\ %mettre votre nom
 %\textsc{ddd dddd} (Promo - departement - respo)     %2 nom
 }
 
@@ -67,13 +67,14 @@ showstringspaces=false}
 
 \maketitle
 \begin{center}
-\includegraphics[width=6cm]{inp-enseeiht.pdf}   
+\includegraphics[width=7cm]{inp-enseeiht.pdf}   
 \end{center}
 
-\vspace{1cm}
+\vspace{.1cm}
 \renewcommand{\contentsname}{Plan}
+\setcounter{tocdepth}{2}
 \tableofcontents
-\vspace{2cm}
+\vspace{.1cm}
 
 \newpage
 \section{Objectifs}
@@ -311,14 +312,14 @@ ferta appel aux sous modules suivants :
    \end{minipage}
  \end{figure}
 
-<<<<<<< HEAD
+
 
   \subsection{Décision}
  \paragraph{} Nous rapellons la composition final du fréquencemètre :
  
- \begin{figure}[H]
+\begin{figure}[H]
 \begin{center}
-	\includegraphics[scale=1]{sch-frequencemetre.png}
+	\includegraphics[scale=.9]{sch-frequencemetre.png}
 	\caption{Diagramme A0}
 \end{center}
 \end{figure}
@@ -334,12 +335,10 @@ ferta appel aux sous modules suivants :
 \end{figure}
   
   
-\subsection{Performances du système}
-TODO : courbe erreur + pourcentage + rapidite 
 
-
-=======
 \subsection{Performances du système}
+
+\subsubsection{Erreur de mesure}
 Nous avons une suite de mesures à différentes fréquences pour regarder l'erreur commise. Une fois calibrage effectuer, on a une erreur maximale
 de 0.15\%, ce qui nous convient parfaitement.  
 \begin{figure}[H]
@@ -349,9 +348,34 @@ de 0.15\%, ce qui nous convient parfaitement.
 \end{center}
 \end{figure}
 On s'aperçoit que l'on a un pic d'erreur aux alentours de 7KHz, fréquence à laquelle on bascule de méthode pour augmenter la précision.
->>>>>>> 79805d13f5c761feaadb7bbd8c1158ea6f25fe16
+
+\subsubsection{Ressources mobilisées}
+
+\paragraph{} Dans sa version finale, avec les réglages d'optimisation par défaut, le fréquencemètre utilise les ressources suivantes :
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[scale=.5]{summary.png}
+	\caption{Ressources mobilisées}
+\end{center}
+\end{figure}
+
+
+
 \newpage
 \section{Bilan}
+
+\paragraph{} Le fréquencemètre final répond bien au cahier des charges. Cependant, des améliorations sont possibles :
+Un système de calibration automatisé rendrait le système indépendant de l'horloge de la carte. 
+Il faudrait cependant veiller à garder les mêmes ordres de grandeur en fréquence d'horloge pour ne pas 
+faire déborder les signaux...
+
+
+
+\paragraph{} Ce projet nous a aussi permis de mieux apréhender les rudiments de la modélisation et synthèse VHDL.
+Nous avons appris le synoptique de base qu'il faut suivre pour développer une application électronique numérique en VHDL.
+La conception entièrement synchrone à l'aide des machines d'état nous a permis d'obtenir des résultats pratiques identiques 
+à la simulation.
 
 \newpage
 \appendix
@@ -384,4 +408,12 @@ L'utilisateur pourra édité le fichier de contraintes selon ses besoins et ress
 \section{Extrait code vhdl}
 \subsection{Module trouver-digit}
 \lstinputlisting{../trouver_digit.vhd}
+
+\subsection{Code complet}
+
+\paragraph{} L'intégralité du code source relatif à ce projet est disponible à l'adresse :
+ \begin{center} 
+  \url{https://github.com/maxn7/Frequencemetre}
+ \end{center}
+
 \end{document}
