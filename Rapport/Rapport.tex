@@ -51,7 +51,7 @@ showstringspaces=false}
 \renewcommand{\headrulewidth}{0pt}
 \fancyhead{}}
 % Titre a compl»ter
-\title{\textbf{ \huge{Projet de VHDL}}  \\{\Large Réalisation d'un Fréquencemètre}}
+\title{\textbf{ \huge{Projet Electronique Numérique}}  \\{\Large Réalisation d'un Fréquencemètre}}
 
 \author{
 \textsc{Jérémie Fourmann \& Maxime Morin}\\ %mettre votre nom
@@ -133,9 +133,9 @@ fonctionnement normal pour le pas afficher des données érronées à l'utilisat
   Precision_{BF}= \frac{F_{clk}}{F_{signal}}
   \end{equation*}
   \begin{equation*}
-  Precision_{HF}= \frac{F_{signal}}{F_{étalon}}
+  Precision_{HF}= \frac{F_{signal}}{F_{etalon}}
   \end{equation*}
-
+Avec $F_{clk}=50 MHz$ et $F_{etalon}=1Hz$
 \begin{figure}[H]
 \begin{center}
 	\includegraphics[scale=.7]{graphMethode.png}
@@ -183,7 +183,7 @@ ce bloc en sous modules :
 \begin{description}
   \item[La mesure par étalon : ] Nous mesurons le nombre de fronts du signal pendant une période étalon de 1 seconde. Ce nombre de fronts est
   proportionnel à la fréquence.
-  \item[La mesure par échantillonnage : ] Nous comptons le nombre de fronts d'horloge entre dexus fronts du signal. Ce nombre est
+  \item[La mesure par échantillonnage : ] Nous comptons le nombre de fronts d'horloge entre deux fronts du signal. Ce nombre est
   inversement proportionnel à la fréquence, il faudra l'inverser...
   \item[La décision : ] Nous choisissons quelle mesure est la plus précise pour être afficher, selon la fréquence de travail...
   \item[L'affichage : ] Nous affichons la valeur envoyée par le module de décision.
@@ -202,14 +202,14 @@ ce bloc en sous modules :
 \end{figure}
 
 \paragraph{} L'objectif de ce module est de transformer le résultat de la mesure (une succession de zéros et de uns sans unité) 
-en une grandeur physique en décimale dans les grandeurs du système internationnal... Nous avons choisi de faire un bloc très générique : 
+en une grandeur physique en décimal dans les grandeurs du système internationnal... Nous avons choisi de faire un bloc très générique : 
 il recevra un nombre binaire codé sur 24 bits et une information sur son unité (Hertz ou milli-Hertz), il devra ensuite le formater 
 et l'afficher sur les 4 afficheurs de la carte, en plaçant le point et déterminant le calibre.
 
 \begin{description}
   \item[trouver\_calibre : ] Ce bloc détermine le calibre que nous allons afficher à l'utilisateur, c'est à dire la position du point, la
   led à allumer, et la puissance de 10 du nombre à afficher (utile pour la conversion dans le bloc suivant). Ce bloc est combinatoire.
-  \item[trouver\_digit : ] Ce module converti en binaire codé décimal et affiche un à un les quatres digits significatifs de la fréquence. 
+  \item[trouver\_digit : ] Ce module convertit en binaire codé décimal et affiche un à un les quatres digits significatifs de la fréquence. 
   Il utilise des données déteminées par le bloc précédent. Il gère aussi le balayage en insérant un reatrd de 2ms entre deux digits et 
   en commandant le sélecteur.
   \item[decodeur : ] Ce bloc se contente de convertir le BCD pour commander l'afficheur. Il est combinatoire.
@@ -239,10 +239,10 @@ machine d'état est d'après nous la plus intéressante de ce projet. Son code s
 \end{figure}
 
 \paragraph{} L'objectif de ce module est de compter le nombre de front du signal pendant un temps fixe apellé ``étalon''.
-La période de cet étalon a été fixé précédemment (TODO) à une seconde. Etant donné que cette méthode ne sera utilisée que pour les 
+La période de cet étalon a été fixé précédemment à une seconde. Etant donné que cette méthode ne sera utilisée que pour les 
 fréquences suppérieures au KHz (le seuil étant à 7kHz), nous ferons en sorte que la grandeur de sortie soit en Hz, ce qui nous permet 
-de rentrer dans le chaier des chagres en tremes de précison et en terme de plage de fréquence en n'utilisant que 24bits. Ce module 
-ferta appel aux sous modules suivants :
+de rentrer dans le chaier des charges en terme de précison et en terme de plage de fréquence en n'utilisant que 24bits. Ce module 
+fera appel aux sous modules suivants :
 
 \begin{description}
   \item[rise\_detect : ] Ce bloc permet de générer une impulsion durant exactement 1 cycle d'horloge lorsqu'un front montant est détecté
@@ -269,7 +269,7 @@ ferta appel aux sous modules suivants :
 \begin{figure}[H]
 \begin{center}
 	\includegraphics[scale=.6]{machine_mesureEtalon.png}
-	\caption{Machine d'état de Compte\_etalon}
+	\caption{Machine d'état de compteur\_front}
 \end{center}
 \end{figure}
 
@@ -284,18 +284,15 @@ ferta appel aux sous modules suivants :
 \end{center}
 \end{figure}
 
-\paragraph{} L'objectif de ce module est de compter le nombre de front du signal pendant un temps fixe apellé ``étalon''.
-La période de cet étalon a été fixé précédemment (TODO) à une seconde. Etant donné que cette méthode ne sera utilisée que pour les 
-fréquences suppérieures au KHz (le seuil étant à 7kHz), nous ferons en sorte que la grandeur de sortie soit en Hz, ce qui nous permet 
-de rentrer dans le chaier des chagres en tremes de précison et en terme de plage de fréquence en n'utilisant que 24bits. Ce module 
-ferta appel aux sous modules suivants :
+\paragraph{} L'objectif de ce module est de compter le nombre de front de l'horloge pendant deux front du signal d'entrée.
+Ce module fera appel aux sous modules suivants :
 
 \begin{description}
   \item[rise\_detect : ] Ce bloc permet de générer une impulsion durant exactement 1 cycle d'horloge lorsqu'un front montant est détecté
   sur son entrée.
-  \item[clk1hz : ] Module de division de fréquence permettant de générer une fréquence de 1 Hertz pour cadencer les échelons.
-  \item[compteur\_fronts : ] Ce bloc compte le nombre de fronts du signal entre deux fronts du signal d'étalon, après chaque mesure,
+  \item[compteur\_fronts : ] Ce bloc compte le nombre de fronts de l'horloge entre deux fronts du signal d'étalon, après chaque mesure,
   il met la valeur sur le bus de sortie et relance une nouvelle mesure.
+\item[perTofreq : ] Ce bloc permet de calculer la fréquence en effectuant une division.
 \end{description}
 
 
@@ -315,7 +312,7 @@ ferta appel aux sous modules suivants :
 
 
   \subsection{Décision}
- \paragraph{} Nous rapellons la composition final du fréquencemètre :
+ \paragraph{} Nous rapelons la composition finale du fréquencemètre :
  
 \begin{figure}[H]
 \begin{center}
@@ -339,7 +336,7 @@ ferta appel aux sous modules suivants :
 \subsection{Performances du système}
 
 \subsubsection{Erreur de mesure}
-Nous avons une suite de mesures à différentes fréquences pour regarder l'erreur commise. Une fois calibrage effectuer, on a une erreur maximale
+Nous avons une suite de mesures à différentes fréquences pour regarder l'erreur commise. Une fois le calibrage effectué, on a une erreur maximale
 de 0.15\%, ce qui nous convient parfaitement.  
 \begin{figure}[H]
 \begin{center}
@@ -366,13 +363,13 @@ On s'aperçoit que l'on a un pic d'erreur aux alentours de 7KHz, fréquence à l
 \section{Bilan}
 
 \paragraph{} Le fréquencemètre final répond bien au cahier des charges. Cependant, des améliorations sont possibles :
-Un système de calibration automatisé rendrait le système indépendant de l'horloge de la carte. 
+un système de calibration automatisé rendrait le système indépendant de l'horloge de la carte. 
 Il faudrait cependant veiller à garder les mêmes ordres de grandeur en fréquence d'horloge pour ne pas 
 faire déborder les signaux...
 
 
 
-\paragraph{} Ce projet nous a aussi permis de mieux apréhender les rudiments de la modélisation et synthèse VHDL.
+\paragraph{} Ce projet nous a aussi permis de mieux appréhender les rudiments de la modélisation et la synthèse VHDL.
 Nous avons appris le synoptique de base qu'il faut suivre pour développer une application électronique numérique en VHDL.
 La conception entièrement synchrone à l'aide des machines d'état nous a permis d'obtenir des résultats pratiques identiques 
 à la simulation.
@@ -381,19 +378,19 @@ La conception entièrement synchrone à l'aide des machines d'état nous a permi
 \appendix
 \section{Manuel d'utilisateur}
 \subsection{Introduction}
-L'utilisateur pourra utiliser le projet soit en utilisant le component Fréquencemètre pour l'inclure dans un autre projet soit l'utilisé directement sur la Nexys 2.
+L'utilisateur pourra utiliser le projet soit en utilisant le ``component Fréquencemètre'' pour l'inclure dans un autre projet soit l'utiliser directement sur la Nexys 2.
 
 \subsection{Component VHDL}
 Notre projet peut se résumer en un seul component suivant :
 \begin{figure}[H]
 \begin{center}
 	\includegraphics[scale=1]{freqa0.png}
-	\caption{Component du projet fréquence}
+	\caption{``Component'' du projet fréquence}
 \end{center}
 \end{figure}
 
 \subsection{Implémentation sur Nexys 2}
-En chargent le .bit, l'utilisateur pourra utilisé le fréquencemètre.
+En chargeant le .bit, l'utilisateur pourra utiliser le fréquencemètre.
 \begin{figure}[H]
 \begin{center}
 	\includegraphics[scale=.5]{fpga.png}
@@ -402,7 +399,7 @@ En chargent le .bit, l'utilisateur pourra utilisé le fréquencemètre.
 \end{figure}
 
 \subsection{Fichier contrainte}
-L'utilisateur pourra édité le fichier de contraintes selon ses besoins et ressources disponible.
+L'utilisateur pourra éditer le fichier de contraintes selon ses besoins et les ressources disponibles.
 \lstinputlisting{../frequencemetre.ucf}
 \newpage
 \section{Extrait code vhdl}
